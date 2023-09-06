@@ -1,9 +1,20 @@
 import javax.swing.JFrame;
 
-public class Screen {
-    
-    JFrame jFrame = new JFrame();
+public class Screen extends JFrame{
+    public Screen() {
 
-    jFrame.setVisible(true);
+        setTitle("Estudos Interface Gráfica");
+        
+        setResizable(false);
+        setSize(800, 500);
+        setVisible(true);
+
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+    }
+
+
 
 }
