@@ -19,7 +19,7 @@ public class Janela extends JFrame {
     /* Construtor da Classe */
     public Janela() {
         setLayout(new FlowLayout()); // Definido o Layout, posicionamento automático dos itens
-        painel = new JPanel(); // instanciação do painel
+        painel = new JPanel(); // Instanciação do painel
 
         /* Botão 1 */
         b1 = new JButton("Botão 1"); // Instanciação do primeiro botão
@@ -64,6 +64,7 @@ public class Janela extends JFrame {
     /* Classe que herda de ActionListener para ação do botão 2 */
     private class CliqueBtn implements ActionListener {
 
+        /* Sobrecrição do método abstrato da Classe ActionListener */
         @Override
         public void actionPerformed(ActionEvent e) {
             JOptionPane.showMessageDialog(Janela.this, "Botão 2 clicado...");
