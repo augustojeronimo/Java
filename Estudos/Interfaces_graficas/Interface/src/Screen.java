@@ -108,6 +108,7 @@ public class Screen extends JFrame {
         registerButton.setForeground(new Color(255,255,255));
         registerButton.setFont(buttonFont);
         registerButton.setBorder(borderInput);
+        registerButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         registerButton.addActionListener(e -> {
             String message = String.format("Nome: %s\nCPF: %s\nIdade: %s\nTelefone: %s", nameField.getText(), cpfField.getText(), ageField.getText(), telField.getText());
