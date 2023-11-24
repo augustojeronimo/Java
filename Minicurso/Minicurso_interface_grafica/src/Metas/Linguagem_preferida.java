@@ -50,6 +50,7 @@ public class Linguagem_preferida extends javax.swing.JFrame {
         radio_java = new javax.swing.JRadioButton();
         radio_python = new javax.swing.JRadioButton();
         radio_javascript = new javax.swing.JRadioButton();
+        botao_enviar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,41 +85,21 @@ public class Linguagem_preferida extends javax.swing.JFrame {
         radio_php.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         radio_php.setText("PHP");
         radio_php.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        radio_php.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radio_phpActionPerformed(evt);
-            }
-        });
 
         radio_java.setBackground(new java.awt.Color(255, 255, 255));
         radio_java.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         radio_java.setText("Java");
         radio_java.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        radio_java.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radio_javaActionPerformed(evt);
-            }
-        });
 
         radio_python.setBackground(new java.awt.Color(255, 255, 255));
         radio_python.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         radio_python.setText("Python");
         radio_python.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        radio_python.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radio_pythonActionPerformed(evt);
-            }
-        });
 
         radio_javascript.setBackground(new java.awt.Color(255, 255, 255));
         radio_javascript.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         radio_javascript.setText("JavaScript");
         radio_javascript.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        radio_javascript.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radio_javascriptActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -147,14 +128,23 @@ public class Linguagem_preferida extends javax.swing.JFrame {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
+        botao_enviar.setText("Enviar");
+        botao_enviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botao_enviarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botao_enviar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -163,7 +153,9 @@ public class Linguagem_preferida extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botao_enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -174,27 +166,39 @@ public class Linguagem_preferida extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void radio_phpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radio_phpActionPerformed
-        JOptionPane.showMessageDialog(null, "Aceitável...");
-    }//GEN-LAST:event_radio_phpActionPerformed
-
-    private void radio_javaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radio_javaActionPerformed
-        JOptionPane.showMessageDialog(null, "Isso aí!");
-    }//GEN-LAST:event_radio_javaActionPerformed
-
-    private void radio_pythonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radio_pythonActionPerformed
-        JOptionPane.showMessageDialog(null, "Nutela...");
-    }//GEN-LAST:event_radio_pythonActionPerformed
-
-    private void radio_javascriptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radio_javascriptActionPerformed
-        JOptionPane.showMessageDialog(null, "Questionável, mas tudo bem");
-    }//GEN-LAST:event_radio_javascriptActionPerformed
+    private void botao_enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_enviarActionPerformed
+        
+        if (radio_php.isSelected()) {
+            
+            JOptionPane.showMessageDialog(this, "PHP é uma ótima linguagem para backend de sites!");
+            
+        } else if (radio_java.isSelected()) {
+            
+            JOptionPane.showMessageDialog(this, "Java é uma linguagem multiplataforma sensacional!");
+            
+        } else if (radio_python.isSelected()) {
+            
+            JOptionPane.showMessageDialog(this, "Python é uma boa linguagem para se iniciar na programação!");
+            
+        } else if (radio_javascript.isSelected()) {
+            
+            JOptionPane.showMessageDialog(this, "JavaScript é uma linguagem frontend, ela roda no seu navegador!");
+            
+        } else {
+            
+            JOptionPane.showMessageDialog(this, "Escolha uma linguagem!");
+            
+        }
+        
+    }//GEN-LAST:event_botao_enviarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,7 +211,7 @@ public class Linguagem_preferida extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -232,6 +236,7 @@ public class Linguagem_preferida extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botao_enviar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
