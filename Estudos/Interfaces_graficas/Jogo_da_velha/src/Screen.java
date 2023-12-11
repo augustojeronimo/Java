@@ -41,11 +41,13 @@ public class Screen extends JFrame {
         for (int l = 0; l < 3; l++) {
             for (int c = 0; c < 3; c++) {
 
-                buttons[l][c] = new JButton();
+                buttons[l][c] = new JButton("X");
 
                 buttons[l][c].setBounds(pos[l],pos[c],buttonSize,buttonSize);
 
                 buttons[l][c].setBackground(SPOT_COLOR);
+                buttons[l][c].setForeground(new Color(255,255,255));
+                buttons[l][c].setFont(new Font(Font.SANS_SERIF,Font.BOLD,100));
                 buttons[l][c].setBorder(new LineBorder(new Color(0), 0));
 
                 fieldPanel.add(buttons[l][c]);
@@ -55,7 +57,7 @@ public class Screen extends JFrame {
 
         /* - Ação dos botões - */
 
-
+        turn = 0;
 
         for (int l = 0; l < 3; l++) {
             for (int c = 0; c < 3; c++) {
@@ -63,26 +65,18 @@ public class Screen extends JFrame {
                 final int y = l;
                 final int x = c;
 
-                buttons[l][c].addActionListener(e -> {
+                buttons[y][x].addActionListener(e -> {
 
                     if (buttons[y][x].getText().isEmpty()) {
 
-                        buttons[y][x].setText(jogador);
+                        String player = turn % 2 == 0? "X" : "O";
 
-                        switch (jogador){
-                            case "X":
-                                jogador = "O";
-                                break;
-                            case "O":
-                                jogador = "X";
-                                break;
-                            default:
-                                break;
-                        }
+                        buttons[y][x].setText("O");
+                        System.out.println(y+"-"+x);
 
+                        turn++;
                     }
 
-                    System.out.println(jogador);
                 });
 
             }
@@ -93,7 +87,7 @@ public class Screen extends JFrame {
 
     /* Jogo */
 
-    private String jogador;
+    private int turn;
 
     /* Medidas */
     private final int HEIGHT = 500;
